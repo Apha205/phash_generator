@@ -1,0 +1,19 @@
+[project]
+name = "phash-calculator"
+version = "0.1.0"
+description = "A simple Python package to calculate perceptual hashes (pHash) for images or videos."
+authors = [
+    { name = "Lawd", email = "abackup6606@gmail.com" }
+]
+
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "opencv-python",
+    "imagehash",
+    "Pillow"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
