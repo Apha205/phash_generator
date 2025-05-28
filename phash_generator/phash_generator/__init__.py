@@ -1,1 +1,1 @@
-from .phashcalculator import calculate_phash
+from .phashcalculator import get_phash
