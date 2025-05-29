@@ -10,7 +10,7 @@ pip install phashgenerator
 
 Usage
 from phashgenerator import calculate_phash
-phash = calculate_phash("path/to/your/image_or_video.jpg")
+phash = get_phash("path/to/your/image_or_video.jpg")
 print(phash)
 
 What is pHash?
