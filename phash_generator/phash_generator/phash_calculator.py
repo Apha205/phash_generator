@@ -60,7 +60,14 @@ def create_sprite(frames):
         sprite.paste(frame, col * SPRITE_WIDTH, row * SPRITE_WIDTH) #Paste the frames at the calculated position
         return sprite
 
-def get_phash():
-    video_phash = phash(sprite)
-    return   video_phash
+def get_phash(video_path):
+    cap = cv2.VideoCapture(video_path)
+    success, frame = cap.read()
+    if not success:
+        print("Failed to read video")
+        return None
+    cap.release()
+    img = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)) #Converting frame(numpy array) to PIL image)
+    phash = imagehash.phash(img)
+    return str(phash)
 
